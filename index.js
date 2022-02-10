@@ -7,8 +7,8 @@ window.onload = input;
 
 document.querySelector('#botao').addEventListener('click', function () {
 
-    let peso      = document.querySelector('#peso'  ).value;
-    let altura    = document.querySelector('#altura').value;
+    let peso      = document.querySelector('#peso'     ).value;
+    let altura    = document.querySelector('#altura'   ).value;
     let resultado = document.querySelector('.resultado');
 
     let imc = peso / (altura * altura);
@@ -31,7 +31,7 @@ document.querySelector('#botao').addEventListener('click', function () {
 
 function criarFrase(value)
 {
-    let text = "...";
+    let text = "com obesidade Morbida";
 
     if (value < 20)   {  
         text ='abaixo do peso ideal';
@@ -48,9 +48,6 @@ function criarFrase(value)
     else if (value > 35 && value <= 40)   {  
         text ="com obesidade preocupante";
     }  
-    else if (value > 40 && value <= 50)   {  
-        text ="com obesidade Morbida";
-    }
 
     return text;
 }
