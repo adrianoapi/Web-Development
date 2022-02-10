@@ -1,3 +1,10 @@
+
+
+function input() {
+    document.getElementById("altura").focus();
+}
+window.onload = input;
+
 document.querySelector('#botao').addEventListener('click', function () {
 
     let peso      = document.querySelector('#peso'  ).value;
