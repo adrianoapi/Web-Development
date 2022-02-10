@@ -5,7 +5,7 @@ function input() {
 }
 window.onload = input;
 
-document.querySelector('#botao').addEventListener('click', function () {
+document.querySelector('#btn-calcular').addEventListener('click', function () {
 
     let peso      = document.querySelector('#peso'     ).value;
     let altura    = document.querySelector('#altura'   ).value;
@@ -25,7 +25,10 @@ document.querySelector('#botao').addEventListener('click', function () {
         resultado.innerHTML = 'Seu IMC é de  '
         + '<strong>' + Math.round(imc) + '</strong>, '
         + 'logo está <strong>' + criarFrase(imc) + '</strong>!';
-   }, 250);
+
+        input();
+
+   }, 300);
 
 });
 
