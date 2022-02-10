@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Document</title>
+    </head>
+    <body>
+
+        <table>
+            <thead>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>Ação</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" id="altura" value=''> m</td>
+                    <td><input type="text" id="peso"/> kg</label></td>
+                    <td><button id="botao">Calcular</button></td>
+                </tr>
+            </tbody>
+        </table>
+   
+    <br>
+    <div class="resultado">
+    </div>
+    
+    <script>
+
+        document.querySelector('#botao').addEventListener('click', function () {
+
+            let peso    = document.querySelector('#peso'  ).value;
+            let altura  = document.querySelector('#altura').value;
+            
+            let frase = document.createElement('span');
+
+            let imc     = peso / (altura * altura);
+
+            frase.textContent = 'IMC: ' +  Math.round(imc) ;
+
+            let resultado = document.querySelector('.resultado');
+
+            resultado.appendChild(frase);
+
+        });
+
+    </script>
+    </body>
+</html>
