@@ -1,7 +1,11 @@
 # Web-Development
 
+## Exercício IMC
 
-## Adirano Araújo Costa
-## Elaine Moura
-## Flávio Nogueira
-## Rodrigo Moura
+Adriano Araújo Costa
+
+Elaine Moura
+
+Flávio Nogueira
+
+Rodrigo Moura
