@@ -1,18 +1,15 @@
-var messages = [
-    "aaaaaa",
-    "bbbb",
-    "ccccccc",
-];
+document.querySelector('#botao').addEventListener('click', function () {
 
-function pickMessage(){
-    var num = Math.random();
-    return messages[0];
-}
+    let peso    = document.querySelector('#peso'  ).value;
+    let altura  = document.querySelector('#altura').value;
+    let frase   = document.createElement('span');
 
-function updateMessage(){
-    document.querySelector('div.letter-content').innerHTML = pickMessage();
-}
+    let imc     = peso / (altura * altura);
 
-window.onload = function() {
-    document.getElementsById('btn').addEventListener('click', updateMessage);
-}
+    frase.textContent = 'IMC: ' +  Math.round(imc) ;
+
+    let resultado = document.querySelector('.resultado');
+
+    resultado.appendChild(frase);
+
+});
