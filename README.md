@@ -1,6 +1,5 @@
 # Web-Development
 
-## Criadores
 
 ## Adirano Araújo Costa
 ## Elaine Moura
