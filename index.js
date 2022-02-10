@@ -6,35 +6,35 @@ document.querySelector('#botao').addEventListener('click', function () {
 
     let imc     = peso / (altura * altura);
 
-    frase.textContent = 'Seu IMC é de  ' +  Math.round(imc) + ', logo ' + criarFrase(imc);
+    frase.textContent = 'Seu IMC é de  ' +  Math.round(imc) + ', logo está ' + criarFrase(imc) + '!';
 
     let resultado = document.querySelector('.resultado');
-
+    resultado.innerHTML = "";
     resultado.appendChild(frase);
 
 });
 
 function criarFrase(value)
 {
-    let text = "informe novamente os valores";
+    let text = "...";
 
     if (value < 20)   {  
-        text ='Abaixo do peso ideal';
+        text ='abaixo do peso ideal';
     }  
     else if (value > 20 && value <= 25)   {  
-        text ="Peso Ideal";
+        text ="no peso Ideal";
     }  
     else if (value > 25 && value <= 30)   {  
-        text ="Acima do peso ideal";
+        text ="acima do peso ideal";
     }  
     else if (value > 30 && value <= 35)   {  
-        text ="Inicio da obesidade";
+        text ="no inicio da obesidade";
     }  
     else if (value > 35 && value <= 40)   {  
-        text ="Obesidade preocupante";
+        text ="com obesidade preocupante";
     }  
     else if (value > 40 && value <= 50)   {  
-        text ="Obesidade Morbida";
+        text ="com obesidade Morbida";
     }
 
     return text;
