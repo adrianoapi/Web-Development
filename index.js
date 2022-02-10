@@ -1,16 +1,24 @@
 document.querySelector('#botao').addEventListener('click', function () {
 
-    let peso    = document.querySelector('#peso'  ).value;
-    let altura  = document.querySelector('#altura').value;
-    let frase   = document.createElement('span'   );
-
-    let imc     = peso / (altura * altura);
-
-    frase.textContent = 'Seu IMC é de  ' +  Math.round(imc) + ', logo está ' + criarFrase(imc) + '!';
-
+    let peso      = document.querySelector('#peso'  ).value;
+    let altura    = document.querySelector('#altura').value;
     let resultado = document.querySelector('.resultado');
-    resultado.innerHTML = "";
-    resultado.appendChild(frase);
+
+    let imc = peso / (altura * altura);
+    resultado.innerHTML = "Calculando...";
+
+    // Validar valores
+    if(peso <= 0 || altura <= 0){
+        resultado.innerHTML = 'Informe valores válidos!';
+        return false;
+    }
+
+    // Passar imagem de interação
+    setTimeout(function(){
+        resultado.innerHTML = 'Seu IMC é de  '
+        + '<strong>' + Math.round(imc) + '</strong>, '
+        + 'logo está <strong>' + criarFrase(imc) + '</strong>!';
+   }, 250);
 
 });
 
